@@ -3,6 +3,7 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #72615b;
+  height: 100%;
 }
 
 .image-container {
@@ -38,7 +39,7 @@ body {
   
 }
 .title{
-  --gap: 33rem;
+  --gap: 33vw;
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -68,7 +69,7 @@ white-space: nowrap;
   }
 
 .title2{
-  --gap: 33rem;
+  --gap: 33vw;
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -99,7 +100,7 @@ white-space: nowrap;
 
 
 .title3{
-  --gap: 33rem;
+  --gap: 33vw;
   display: flex;
   overflow: hidden;
   user-select: none;
