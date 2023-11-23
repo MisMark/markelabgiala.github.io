@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #72615b;
+  height: 100%;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 50vh;
+  margin-top: 29%;
+  cursor: url('/Content/Cursor2.png');
+}
+
+.image-container img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 40vw;
+  max-height: 35vw;
+ 
+}
+
+
+
+.image-container video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 35vw;
+  max-width: 45vw;  
+}
+
+@media (max-width: 1368px) {
+  .image-container {
+    margin-top: 60%; /* Adjust as needed */
+  }
+}
+
+.title{
+  --gap: 33vw;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  position: absolute;
+height: 20%;
+width: 33%;
+top: 0%;
+left: 0%;
+white-space: nowrap;
+
+}
+
+.title h1{
+  font-size: 120px;
+  font-family: 'ABCDIA';
+  color: white;
+  width: 100%;
+  height: 20%;
+  margin: 0; 
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 10s linear infinite;
+  }
+
+.title2{
+  --gap: 33vw;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  position: absolute;
+height: 20%;
+width: 33%;
+top: 0%;
+left: 33%;
+white-space: nowrap;
+
+}
+
+.title2 h1{
+  font-size: 120px;
+  font-family: 'ABCDIA';
+  color: white;
+  width: 100%;
+  height: 20%;
+  margin: 0; 
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 12s linear infinite;
+  }
+
+
+.title3{
+  --gap: 33vw;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  position: absolute;
+height: 20%;
+width: 33%;
+top: 0%;
+left: 66%;
+white-space: nowrap;
+
+}
+
+.title3 h1{
+  font-size: 120px;
+  font-family: 'ABCDIA';
+  color: white;
+  width: 100%;
+  margin: 0; 
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 15s linear infinite;
+  }
+
+
+
+
+ 
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+
+
+  .arrow{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    }
+    
+    .arrow img{
+      width: 10%;
+      }
+
+
+
+
+
+.borders{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 96%;
+  font-size: 20px;
+  font-family: 'ABCDIA';
+  color: white;
+  background-color: transparent;
+  cursor:pointer;
+  border: transparent;
+  }
+
+  .return{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 96%;
+    font-size: 20px;
+    font-family: 'ABCDIA';
+    color: white;
+    background-color: transparent;
+    cursor:pointer;
+    border: transparent;
+    }
+
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4e31e1; /* Semi-transparent background */
+    z-index: 200;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-content h1{
+  line-height: 1ch;
+  position: absolute;
+  font-size: 4rem;
+  font-family: 'ABCDIA';
+  color:#2d3034;
+}
+
+.overlay-content h2{
+  top: 15%;
+  left: 5%;
+  line-height: 2.3rem;
+  width: 70%;
+  position: absolute;
+  font-size: 2rem;
+  font-family: 'ABCDIA';
+  color:#2d3034;
+}
+
+.links{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 5%;
+  font-size: 1.5rem;
+  font-family: 'ABCDIA';
+  color:#2d3034;
+}
+
+
+@font-face {
+  font-family: 'ABCDIA';
+  src: url('/ABCDiatype-Bold-Trial.woff') format('woff');
+  src: url('/ABCDiatype-Bold-Trial.woff2') format('woff2');
+  /* Add additional formats if needed */
+}
+
+a {
+
+  color:#2d3034;
+}
