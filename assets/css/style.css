@@ -4,6 +4,7 @@ body {
   overflow: hidden;
   background-color: #72615b;
   height: 100%;
+  width: 100%;
 }
 
 .image-container {
@@ -36,9 +37,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 35vw;
-  max-width: 45vw;
-  
+  max-width: 45vw;  
 }
+
+@media (max-width: 1368px) {
+  .image-container {
+    margin-top: 30%; /* Adjust as needed */
+  }
+}
+
 .title{
   --gap: 33vw;
   display: flex;
