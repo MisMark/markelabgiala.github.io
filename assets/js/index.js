@@ -16,6 +16,8 @@ function shuffleArray(array) {
 shuffleArray(elements);
 
 function handleWheel(e) {
+    e.preventDefault(); // Prevent the default scroll behavior
+
     const currentTime = Date.now();
 
     // Check if enough time has passed since the last scroll event
@@ -46,6 +48,8 @@ function handleTouchStart(e) {
 }
 
 function handleTouchMove(e) {
+    e.preventDefault(); // Prevent the default touch move behavior
+
     const deltaY = e.touches[0].clientY - startY;
 
     if (Math.abs(deltaY) >= swipeThreshold) {
@@ -74,7 +78,6 @@ function handleTouchMove(e) {
 document.addEventListener('wheel', handleWheel);
 document.addEventListener('touchstart', handleTouchStart);
 document.addEventListener('touchmove', handleTouchMove);
-
 
 
 // Click function opening the about page
