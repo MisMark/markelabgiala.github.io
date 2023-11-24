@@ -274,4 +274,16 @@ a {
   .title3 h1{
     font-size: 3rem;
   }
+
+  .overlay-content h1{
+    line-height: 2rem;
+    font-size: 2rem;
+  }
+
+  .overlay-content h2{
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
 }
+
