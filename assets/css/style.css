@@ -251,10 +251,22 @@ a {
 
 @media (max-width: 850px) {
   .image-container {
-    margin-top: 70%; /* Adjust as needed */
+    margin-top: 80%; /* Adjust as needed */
   }
 
   .image-container img{
     width: 100%;
+    max-height: 80%;
+  }
+
+  .title h1{
+    font-size: 3rem;
+  }
+
+  .title2 h1{
+    font-size: 3rem;
+  }
+  .title3 h1{
+    font-size: 3rem;
   }
 }
