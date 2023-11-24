@@ -40,9 +40,13 @@ body {
   max-width: 45vw;  
 }
 
-@media (max-width: 1368px) {
+@media (max-width: 1200px) {
   .image-container {
-    margin-top: 30%; /* Adjust as needed */
+    margin-top: 60%; /* Adjust as needed */
+  }
+  .title h1{
+    font-size: 1rem; /* Adjust as needed */
+    color: #4e31e1;
   }
 }
 
