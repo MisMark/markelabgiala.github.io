@@ -40,15 +40,7 @@ body {
   max-width: 45vw;  
 }
 
-@media (max-width: 1200px) {
-  .image-container {
-    margin-top: 60%; /* Adjust as needed */
-  }
-  .title h1{
-    font-size: 1rem; /* Adjust as needed */
-    color: #4e31e1;
-  }
-}
+
 
 .title{
   --gap: 33vw;
@@ -256,4 +248,15 @@ white-space: nowrap;
 a {
 
   color:#2d3034;
+}
+
+
+@media (max-width: 850px) {
+  .image-container {
+    margin-top: 60%; /* Adjust as needed */
+  }
+  .title h1{
+    font-size: 1rem; /* Adjust as needed */
+    color: #4e31e1;
+  }
 }
