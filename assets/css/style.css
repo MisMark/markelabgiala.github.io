@@ -247,9 +247,6 @@ a {
 
 
 @media (max-width: 850px) {
-  .image-container {
-    margin-top: 20%; /* Adjust as needed */
-  }
 
   .image-container img{
   max-width: 100vw;
@@ -268,7 +265,7 @@ a {
     --gap: 1rem;
   }
   .title3 {
-    --gap: 3rem;
+    --gap: 33rem;
   }
   .title h1{
     font-size: 3rem;

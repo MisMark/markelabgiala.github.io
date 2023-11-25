@@ -55,7 +55,7 @@ function handleTouchMove(e) {
     if (Math.abs(deltaY) >= swipeThreshold) {
         if (deltaY > 0) {
             // Swiping down
-            if (currentIndex < elements.length - 1) {
+            if (currentIndex > 0 ) {
                 elements[currentIndex].style.zIndex = 0; // Reset the current element
                 currentIndex++;
                 elements[currentIndex].style.zIndex = 100; // Bring the next element to the front
@@ -63,7 +63,7 @@ function handleTouchMove(e) {
             }
         } else {
             // Swiping up
-            if (currentIndex > 0) {
+            if (currentIndex < elements.length - 1) {
                 elements[currentIndex].style.zIndex = 0; // Reset the current element
                 currentIndex--;
                 elements[currentIndex].style.zIndex = 100; // Bring the previous element to the front
