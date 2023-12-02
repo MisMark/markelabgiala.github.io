@@ -246,47 +246,5 @@ a {
 }
 
 
-@media (max-width: 850px) {
 
-  .image-container img{
-  max-width: 100vw;
-    max-height: 100vw;
-  }
-
-  .image-container video{
-    max-width: 100vw;
-    max-height: 100vw;
-  }
-
-  .title {
-    --gap: 1rem;
-  }
-  .title2 {
-    --gap: 1rem;
-  }
-  .title3 {
-    --gap: 33rem;
-  }
-  .title h1{
-    font-size: 3rem;
-  }
-
-  .title2 h1{
-    font-size: 3rem;
-  }
-  .title3 h1{
-    font-size: 3rem;
-  }
-
-  .overlay-content h1{
-    line-height: 2rem;
-    font-size: 2rem;
-  }
-
-  .overlay-content h2{
-    font-size: 1rem;
-    line-height: 1.3rem;
-  }
-
-}
 
