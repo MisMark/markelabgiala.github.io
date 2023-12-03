@@ -43,41 +43,45 @@ function handleWheel(e) {
     }
 }
 
+function showNextImage() {
+    elements[currentIndex].style.zIndex = 0; // Reset the current element
+    currentIndex++;
+    elements[currentIndex].style.zIndex = 100; // Bring the next element to the front
+    elements[currentIndex].style.display = 'block';
+}
+
+function showPreviousImage() {
+    elements[currentIndex].style.zIndex = 0; // Reset the current element
+    currentIndex--;
+    elements[currentIndex].style.zIndex = 100; // Bring the previous element to the front
+}
+
 function handleTouchStart(e) {
-    startY = e.touches[0].clientY;
+    startTouchY = e.changedTouches[0].clientY;
 }
 
 function handleTouchMove(e) {
+    e.preventDefault(); // Prevent the default touchmove behavior
 
-    const deltaY = e.touches[0].clientY - startY;
+    const currentTouchY = e.changedTouches[0].clientY;
+    const deltaY = currentTouchY - startTouchY;
 
-    if (Math.abs(deltaY) >= swipeThreshold) {
-        if (deltaY > 0) {
-            // Swiping down
-            if (currentIndex > 0 ) {
-                elements[currentIndex].style.zIndex = 0; // Reset the current element
-                currentIndex++;
-                elements[currentIndex].style.zIndex = 100; // Bring the next element to the front
-                elements[currentIndex].style.display = 'block';
-            }
-        } else {
-            // Swiping up
-            if (currentIndex < elements.length - 1) {
-                elements[currentIndex].style.zIndex = 0; // Reset the current element
-                currentIndex--;
-                elements[currentIndex].style.zIndex = 100; // Bring the previous element to the front
-            }
+    if (deltaY > swipeThreshold) {
+        // Swiping down
+        if (currentIndex < elements.length - 1) {
+            showNextImage();
         }
-
-        // Reset startY for the next swipe
-        startY = e.touches[0].clientY;
+    } else if (deltaY < -swipeThreshold) {
+        // Swiping up
+        if (currentIndex > 0) {
+            showPreviousImage();
+        }
     }
 }
 
 document.addEventListener('wheel', handleWheel);
 document.addEventListener('touchstart', handleTouchStart);
 document.addEventListener('touchmove', handleTouchMove);
-
 
 // Click function opening the about page
 document.querySelector('.borders').addEventListener('click', function() {
