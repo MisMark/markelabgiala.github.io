@@ -246,5 +246,38 @@ a {
 }
 
 
+@media (max-width: 850px) {
 
+  .image-container img{
+  max-width: 100vw;
+    max-height: 100vw;
+  }
+
+  .image-container video{
+    max-width: 100vw;
+    max-height: 100vw;
+  }
+
+  .title {
+    --gap: 35%;
+  }
+  .title2 {
+    --gap: 35%;
+  }
+  .title3 {
+    --gap: 35%;
+  }
+  
+
+  .overlay-content h1{
+    line-height: 2rem;
+    font-size: 2rem;
+  }
+
+  .overlay-content h2{
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+}
 
