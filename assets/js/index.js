@@ -3,7 +3,7 @@ let currentIndex = 0;
 let lastScrollTime = Date.now();
 let startY = 0;
 const scrollThreshold = 1200; // Set the time threshold (in milliseconds)
-const swipeThreshold = 50; // Set the swipe threshold for touch events
+const swipeThreshold = 10; // Set the swipe threshold for touch events
 
 // Shuffle the elements randomly
 function shuffleArray(array) {

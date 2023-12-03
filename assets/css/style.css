@@ -15,6 +15,7 @@ body {
   height: 100vh;
   margin-top: 3%;
   cursor: url('/Content/Cursor2.png');
+  background-color: #4e31e1;
 }
 
 .image-container img{
@@ -259,6 +260,21 @@ a {
     max-height: 100vw;
   }
 
+  .title3{
+    --gap: 105%;
+    
+  }
+
+  .title2{
+    --gap: 105%;
+    
+  }
+
+  .title{
+    --gap: 105%;
+    
+  }
+  
   
 
   .overlay-content h1{
