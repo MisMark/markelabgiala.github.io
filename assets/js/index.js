@@ -47,15 +47,17 @@ function handleTouchStart(e) {
     startY = e.touches[0].clientY;
 }
 
-function handleTouchMove(e) {
-    e.preventDefault(); // Prevent the default touch move behavior
+function handleTouchStart(e) {
+    startY = e.touches[0].clientY;
+}
 
+function handleTouchMove(e) {
     const deltaY = e.touches[0].clientY - startY;
 
     if (Math.abs(deltaY) >= swipeThreshold) {
         if (deltaY > 0) {
             // Swiping down
-            if (currentIndex > 0 ) {
+            if (currentIndex > 0) {
                 elements[currentIndex].style.zIndex = 0; // Reset the current element
                 currentIndex++;
                 elements[currentIndex].style.zIndex = 100; // Bring the next element to the front
@@ -76,9 +78,10 @@ function handleTouchMove(e) {
 }
 
 document.addEventListener('wheel', handleWheel);
+
+// Instead of setting { passive: false }, use touch-action in CSS
 document.addEventListener('touchstart', handleTouchStart);
 document.addEventListener('touchmove', handleTouchMove);
-
 
 // Click function opening the about page
 document.querySelector('.borders').addEventListener('click', function() {
