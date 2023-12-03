@@ -16,7 +16,7 @@ function shuffleArray(array) {
 shuffleArray(elements);
 
 function handleWheel(e) {
-    e.preventDefault(); // Prevent the default scroll behavior
+
 
     const currentTime = Date.now();
 
