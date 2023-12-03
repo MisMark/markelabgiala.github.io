@@ -206,18 +206,18 @@ white-space: nowrap;
 .overlay-content h1{
   line-height: 1ch;
   position: absolute;
-  font-size: 4rem;
+  font-size: 4.3rem;
   font-family: 'ABCDIA';
-  color:#2d3034;
+  color:#668970;
 }
 
 .overlay-content h2{
-  top: 15%;
-  left: 5%;
-  line-height: 2.3rem;
+  top: 27%;
+  left: 15%;
+  line-height: 2.5rem;
   width: 70%;
   position: absolute;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-family: 'ABCDIA';
   color:#2d3034;
 }
@@ -225,8 +225,8 @@ white-space: nowrap;
 .links{
   position: absolute;
   width: 100%;
-  top: 50%;
-  left: 5%;
+  top: 60%;
+  left: 15%;
   font-size: 1.5rem;
   font-family: 'ABCDIA';
   color:#2d3034;
@@ -258,15 +258,6 @@ a {
     max-height: 100vw;
   }
 
-  .title {
-    --gap: 35%;
-  }
-  .title2 {
-    --gap: 35%;
-  }
-  .title3 {
-    --gap: 35%;
-  }
   
 
   .overlay-content h1{
