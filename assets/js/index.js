@@ -76,9 +76,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function handleClick() {
+        const currentElement = elements[currentIndex];
+    
+        // Toggle visibility of the clicked element
+        currentElement.classList.toggle('enlarged');
+    
+        // Toggle background information visibility
+        const backgroundInfo = document.querySelector('.borders');
+        backgroundInfo.classList.toggle('hidden');
+
+        const title = document.querySelector('.title');
+        title.classList.toggle('hidden');
+
+        const title2 = document.querySelector('.title2');
+        title2.classList.toggle('hidden');
+
+        const title3 = document.querySelector('.title3');
+        title3.classList.toggle('hidden');
+    
+        // Toggle close button visibility
+        const closeButton = document.querySelector('.close-button');
+        closeButton.classList.toggle('hidden');
+
+
+    }
+
     document.addEventListener('wheel', handleWheel);
     document.addEventListener('touchstart', handleTouchStart);
     document.addEventListener('touchmove', handleTouchMove);
+
+
+    elements.forEach(element => {
+        element.addEventListener('click', handleClick);
+    });
+    
+    // Add close button event listener
+    const closeButton = document.querySelector('.close-button');
+    closeButton.addEventListener('click', handleClick);
 
     // Click function opening the about page
     document.querySelector('.borders').addEventListener('click', function() {

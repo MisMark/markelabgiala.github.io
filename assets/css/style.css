@@ -9,8 +9,7 @@ body {
 }
 
 .image-container {
-  position: relative;
-  align-items: center;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   margin-top: 3%;
@@ -36,6 +35,16 @@ body {
   transform: translate(-50%, -50%);
   max-height: 35vw;
   max-width: 45vw;  
+}
+
+.image-container img.enlarged,
+.image-container video.enlarged {
+    /* Your styles for the enlarged state here */
+    position: absolute;
+    max-width: 90vw; /* Adjust to your preferred width */
+    max-height: 90vh; /* Adjust to your preferred height */
+    z-index: 9999;
+    top: 42%;
 }
 
 
@@ -245,6 +254,31 @@ a {
 
   color:#2d3034;
 }
+
+.hidden {
+  /* Your styles for hidden elements here */
+  display: none !important;
+}
+
+/* Style for the close button */
+.close-button {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 96%;
+  font-size: 20px;
+  font-family: 'ABCDIA';
+  color: white;
+  background-color: transparent;
+  cursor:pointer;
+  border: transparent;
+  }
+
+/* Style for the hidden close button */
+.close-button.hidden {
+  display: none;
+}
+
 
 
 @media (max-width: 850px) {
