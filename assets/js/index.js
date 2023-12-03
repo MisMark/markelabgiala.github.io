@@ -57,24 +57,26 @@ function showPreviousImage() {
 }
 
 function handleTouchStart(e) {
-    startTouchY = e.changedTouches[0].clientY;
+    startTouchY = e.touches[0].clientY;
 }
 
 function handleTouchMove(e) {
     e.preventDefault(); // Prevent the default touchmove behavior
 
-    const currentTouchY = e.changedTouches[0].clientY;
+    const currentTouchY = e.touches[0].clientY;
     const deltaY = currentTouchY - startTouchY;
 
     if (deltaY > swipeThreshold) {
         // Swiping down
         if (currentIndex < elements.length - 1) {
             showNextImage();
+            startTouchY = currentTouchY; // Reset start position for the next swipe
         }
     } else if (deltaY < -swipeThreshold) {
         // Swiping up
         if (currentIndex > 0) {
             showPreviousImage();
+            startTouchY = currentTouchY; // Reset start position for the next swipe
         }
     }
 }
