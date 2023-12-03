@@ -41,7 +41,7 @@ body {
 
 
 .title{
-  --gap: 97%;
+  --gap: 100%;
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -71,7 +71,7 @@ white-space: nowrap;
   }
 
 .title2{
-  --gap: 97%;
+  --gap: 100%;
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -101,7 +101,7 @@ white-space: nowrap;
 
 
 .title3{
-  --gap: 97%;
+  --gap: 100%;
   display: flex;
   overflow: hidden;
   user-select: none;
