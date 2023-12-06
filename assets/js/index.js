@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     shuffleArray(elements);
 
     function handleWheel(e) {
-        e.preventDefault(); // Prevent the default scroll behavior
 
         const currentTime = Date.now();
 
@@ -47,34 +46,45 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleTouchStart(e) {
         startY = e.touches[0].clientY;
     }
-
+    
     function handleTouchMove(e) {
-        e.preventDefault(); // Prevent the default touch move behavior
-
-        const deltaY = e.touches[0].clientY - startY;
-
+        // Prevent the default behavior to avoid page scrolling
+    
+        const currentY = e.touches[0].clientY;
+        const deltaY = currentY - startY;
+    
+        // Use deltaY to determine the direction of the swipe
         if (Math.abs(deltaY) >= swipeThreshold) {
             if (deltaY > 0) {
                 // Swiping down
                 if (currentIndex > 0) {
-                    elements[currentIndex].style.zIndex = 0; // Reset the current element
+                    elements[currentIndex].style.zIndex = 0;
                     currentIndex++;
-                    elements[currentIndex].style.zIndex = 100; // Bring the next element to the front
+                    elements[currentIndex].style.zIndex = 100;
                     elements[currentIndex].style.display = 'block';
                 }
             } else {
                 // Swiping up
                 if (currentIndex < elements.length - 1) {
-                    elements[currentIndex].style.zIndex = 0; // Reset the current element
+                    elements[currentIndex].style.zIndex = 0;
                     currentIndex--;
-                    elements[currentIndex].style.zIndex = 100; // Bring the previous element to the front
+                    elements[currentIndex].style.zIndex = 100;
                 }
             }
-
-            // Reset startY for the next swipe
-            startY = e.touches[0].clientY;
         }
     }
+    
+    function handleTouchEnd() {
+        // Reset startY after touch end
+        startY = 0;
+    }
+    
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleTouchEnd);
+document.addEventListener('wheel', handleWheel);
+
+
 
     function handleClick() {
         const currentElement = elements[currentIndex];
@@ -101,10 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     }
-
-    document.addEventListener('wheel', handleWheel);
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchMove);
 
 
     elements.forEach(element => {

@@ -224,10 +224,10 @@ white-space: nowrap;
 .overlay-content h2{
   top: 27%;
   left: 15%;
-  line-height: 2.5rem;
+  line-height: 2.4vw;
   width: 70%;
   position: absolute;
-  font-size: 2.4rem;
+  font-size: 2.2vw;
   font-family: 'ABCDIA';
   color:#2d3034;
 }
@@ -294,18 +294,29 @@ a {
   }
 
   .title3{
-    --gap: 115%;
+    display: none;
     
   }
 
   .title2{
-    --gap: 115%;
-    
+    width: 50%;
+    left: 50%;
+  }
+  .title2 h1{
+    --gap: 100%;
+    width: 100%;
+    left: 50%;
+    font-size: 11vw;
   }
 
   .title{
-    --gap: 115%;
-    
+    width: 50%; 
+  }
+  .title h1{
+    --gap: 100%;
+    width: 100%;
+    left: 50%;
+    font-size: 11vw;
   }
   
   
