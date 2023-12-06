@@ -42,47 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-
-    function handleTouchStart(e) {
-        startY = e.touches[0].clientY;
-    }
-    
-    function handleTouchMove(e) {
-        // Prevent the default behavior to avoid page scrolling
-    
-        const currentY = e.touches[0].clientY;
-        const deltaY = currentY - startY;
-    
-        // Use deltaY to determine the direction of the swipe
-        if (Math.abs(deltaY) >= swipeThreshold) {
-            if (deltaY > 0) {
-                // Swiping down
-                if (currentIndex > 0) {
-                    elements[currentIndex].style.zIndex = 0;
-                    currentIndex++;
-                    elements[currentIndex].style.zIndex = 100;
-                    elements[currentIndex].style.display = 'block';
-                }
-            } else {
-                // Swiping up
-                if (currentIndex < elements.length - 1) {
-                    elements[currentIndex].style.zIndex = 0;
-                    currentIndex--;
-                    elements[currentIndex].style.zIndex = 100;
-                }
-            }
+    function handleTap() {
+        if (currentIndex < elements.length - 1) {
+            elements[currentIndex].style.zIndex = 0; // Reset the current element
+            currentIndex++;
+            elements[currentIndex].style.zIndex = 100; // Bring the next element to the front
+            elements[currentIndex].style.display = 'block';
         }
     }
-    
-    function handleTouchEnd() {
-        // Reset startY after touch end
-        startY = 0;
-    }
-    
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchMove);
-    document.addEventListener('touchend', handleTouchEnd);
-document.addEventListener('wheel', handleWheel);
+
+    document.addEventListener('wheel', handleWheel);
+
+    // Add click event listener for both desktop and mobile
+    document.addEventListener('click', handleTap);
 
 
 
