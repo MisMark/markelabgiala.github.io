@@ -304,7 +304,7 @@ a {
   }
   .title2 h1{
     --gap: 100%;
-    width: 100%;
+    width: 50%;
     left: 50%;
     font-size: 11vw;
   }
@@ -314,7 +314,7 @@ a {
   }
   .title h1{
     --gap: 100%;
-    width: 100%;
+    width: 50%;
     left: 50%;
     font-size: 11vw;
   }
@@ -330,6 +330,16 @@ a {
     font-size: 1rem;
     line-height: 1.3rem;
   }
+  .links{
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    left: 15%;
+    font-size: .8rem;
+    font-family: 'ABCDIA';
+    color:#2d3034;
+  }
+  
 
 }
 
